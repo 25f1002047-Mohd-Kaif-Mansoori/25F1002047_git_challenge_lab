@@ -1,0 +1,47 @@
+## WEEK 7 & 8: Basic Collections in Python (Continued)
+
+- **Set:** An unordered, mutable collection of **unique** elements. Sets do not allow duplicate members. They are useful for membership testing and eliminating duplicate entries. They are defined with curly braces `{}`.
+  - Key operations include **union** (`|`), **intersection** (`&`), and **difference** (`-`) to compare sets.
+
+- **Dictionary:** An unordered collection of **key-value pairs**. Each key must be unique and is used to access its corresponding value. Dictionaries are mutable and are defined with curly braces `{}`, containing pairs like `'key': 'value'`.
+  - **Accessing Data:** Values are accessed using their keys (e.g., `my_dict['key']`), not by an index.
+  - **Mutability:** You can add, change, or delete key-value pairs.
+
+---
+
+## WEEK 9 & 10: File Operations
+
+**File operations** are used to read from and write to files on your computer, allowing for persistent data storage.
+- **open() function:** The primary function for opening a file. It returns a file object. Its two most important arguments are the file path and the **mode**.
+  - `open('myfile.txt', 'r')`
+- **File Modes:**
+  - **'r' (Read):** Default mode. Opens a file for reading, raises an error if the file does not exist.
+  - **'w' (Write):** Opens a file for writing. Creates the file if it does not exist, or truncates (empties) the file if it exists.
+  - **'a' (Append):** Opens a file for appending. Creates the file if it does not exist. New data is written to the end of the file.
+- **with statement:** The recommended way to work with files. It automatically handles closing the file, even if errors occur.
+  - `with open('file.txt', 'r') as f:`
+- **Reading/Writing:**
+  - `file.read()`: Reads the entire content of the file.
+  - `file.readline()`: Reads a single line from the file.
+  - `file.write('some text')`: Writes a string to the file.
+
+---
+
+## WEEK 11: Module System in Python
+
+A **module** is a file containing Python code (functions, classes, variables). Modules are used to break down large programs into smaller, manageable, and organized files, promoting code reusability.
+- **import statement:** Used to bring the code from one module into another.
+  - `import math`: Imports the entire `math` module. You access its functions with `math.pi`.
+  - `from math import pi`: Imports only the `pi` variable from the `math` module, allowing you to use it directly as `pi`.
+- **Python Standard Library:** A large collection of modules included with Python that provides tools for many common tasks (e.g., `os` for interacting with the operating system, `datetime` for working with dates, `json` for working with JSON data).
+
+---
+
+## WEEK 12: Basic Pandas and Numpy Processing of Data
+
+**NumPy (Numerical Python):** The fundamental library for numerical computing in Python.
+- **ndarray (N-dimensional array):** NumPy's core object. It is a powerful and efficient grid of values of the same type. It enables fast mathematical operations on large datasets. All elements in an array must be of the same data type.
+
+**Pandas:** A powerful library built on top of NumPy for data manipulation and analysis. It is essential for data science tasks like cleaning, transforming, merging, and filtering data.
+- **Series:** A one-dimensional labeled array, similar to a column in a spreadsheet.
+- **DataFrame:** A two-dimensional labeled data structure with columns of potentially different types, similar to a spreadsheet, SQL table, or a dictionary of Series objects. It is the most commonly used Pandas object
